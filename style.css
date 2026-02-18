@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  height: 1rem;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #28a745;
+  font-weight: bold;
+  text-align: center;
+}
+
+.articles-list {
+  margin-top: 2rem;
+}
+
+.articles-list h2 {
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.articles-list ul {
+  list-style: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.articles-list li {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background-color: #f9f9f9;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.article-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+  /* espacio para el botón */
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: auto;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+button {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.3s ease;
+}
+
+/* Efecto al presionar */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Efecto hover más dinámico */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación específica para eliminar */
+.delete-btn {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.3s ease;
+}
+
+.delete-btn:active {
+  transform: scale(0.9);
+}
