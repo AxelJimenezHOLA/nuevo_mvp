@@ -60,3 +60,21 @@ async function deleteArticle(id) {
     request.onerror = () => reject(request.error);
   });
 }
+
+async function updateArticle(article) {
+
+  const db = await openDB();
+
+  return new Promise((resolve, reject) => {
+
+    const tx = db.transaction(STORE_NAME, "readwrite");
+    const store = tx.objectStore(STORE_NAME);
+
+    const request = store.put(article);
+
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+
+  });
+
+}

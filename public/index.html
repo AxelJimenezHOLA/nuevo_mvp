@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <meta
+    name="description"
+    content="Un sistema para subir información básica de un artículo académico y su archivo PDF a través de un formulario."
+  />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Artículo Académico</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <main>
+      <section class="form-container">
+        <header>
+          <h1>Registro de Artículo</h1>
+          <p>Ingrese la información básica de su artículo académico</p>
+        </header>
+
+        <form id="articleForm" novalidate>
+          <div class="form-group">
+            <label for="titulo">Título *</label>
+            <input type="text" id="titulo" name="titulo" required />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="autores">Autores *</label>
+            <input type="text" id="autores" name="autores" required />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="pdf">Archivo PDF *</label>
+            <input
+              type="file"
+              id="pdf"
+              name="pdf"
+              accept="application/pdf"
+              required
+            />
+            <small class="error-message"></small>
+          </div>
+
+          <button type="submit">Enviar</button>
+
+          <div id="successMessage" class="success-message"></div>
+        </form>
+
+        <section class="articles-list">
+          <h2>Artículos Guardados</h2>
+          <ul id="articlesContainer"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => console.log("SW registrado:", reg.scope))
+            .catch((err) => console.error("Error SW:", err));
+        });
+      }
+    </script>
+  </body>
+</html>
