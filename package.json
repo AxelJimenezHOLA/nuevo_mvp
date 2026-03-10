@@ -1,0 +1,28 @@
+{
+  "name": "nuevo_mvp",
+  "version": "1.0.0",
+  "description": "This simple project contains a PWA with a service worker (`sw.js`).\r Service workers require an HTTPS origin (except `localhost`), so for\r local testing you can spin up a small HTTPS server using a self-signed\r certificate.",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelJimenezHOLA/nuevo_mvp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AxelJimenezHOLA/nuevo_mvp/issues"
+  },
+  "homepage": "https://github.com/AxelJimenezHOLA/nuevo_mvp#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.4",
+    "multer": "^2.1.1"
+  }
+}
